@@ -266,7 +266,9 @@ margin-bottom: 15px
 
       <div class="col-lg-4">
       <div class="one">
+        <a href="{{ url('details_game',$game->id) }}">
 <img src="{{ asset('Gemes/'.$game->photo) }}" alt="" srcset="">
+</a>
 <div class="text text-center">
   <h3>{{ $game->name }}</h3>
   <p>{{ $game->descrption1 }}</p>
@@ -428,8 +430,10 @@ margin-bottom: 15px
 
  <div class="col-lg-4 col-sm-6">
  <div class="one">
-<img src="{{ asset('Gemes/'.$game->photo) }}" alt="" srcset="">
-<div class="text text-center">
+  <a href="{{ url('details_game',$game->id) }}">
+    <img src="{{ asset('Gemes/'.$game->photo) }}" alt="" srcset="">
+    </a>
+    <div class="text text-center">
   <h3>{{ $game->name }}</h3>
   <p>{{ $game->descrption1 }}</p>
   <button type="button" class="btn btn-primary ahmed" data-bs-toggle="modal" data-bs-target="#myModal">

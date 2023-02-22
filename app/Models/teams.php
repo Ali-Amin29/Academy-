@@ -20,7 +20,7 @@ class teams extends Model
 
     public function Game()
     {
-       return $this->hasOne(Game::class,'id');
+       return $this->belongsTo(Game::class,'game_id');
 
        
     }

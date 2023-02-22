@@ -9,36 +9,28 @@ use App\Models\them;
 use App\Models\About;
 use App\Models\Game;
 use App\Models\teams;
+use App\Models\Detalis_game;
 
 
 class UserController extends Controller
 {
     public function index()
-    {
-        // $matchThese = ['state' => 'coach', 'state' => 'acadamy'];
-
-        // $query->where([
-        //     ['column_1', '=', 'value_1'],
-        //     ['column_2', '<>', 'value_2'],
-        //      ...
-        // ]);
-        
-        // $coach="SELECT * FROM table WHERE state = 'coash'";
-        
+    {  
          $coach = User::where('state','acadamy')->orWhere('state','coach')->get();
- 
-        
         return view('welcome',compact('coach'));
     }
 
     public function them($id)
     {
         $users=User::find($id);
-
- 
- 
         return view('theam.index',compact('users'));
     }
 
+    public function details_game($id)
+    {
+ $game=Game::find($id);
+        $details=Detalis_game::where('games_id',$id)->get();
+          return view('theam.detalis',compact('details','game'));
+    }
 
 }

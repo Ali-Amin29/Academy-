@@ -66,6 +66,7 @@ Route::get('/login',function(){
 Route::get('/',[UserController::class ,'index'])->name('index');
  
 Route::get('acdmay_theam/{id}',[UserController::class ,'them'])->name('acdmay_theam');
+Route::get('details_game/{id}',[UserController::class ,'details_game'])->name('details_game');
 
 
  

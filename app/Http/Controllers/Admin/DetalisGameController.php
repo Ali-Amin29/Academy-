@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Detalis_game;
+use App\Models\Game;
 class DetalisGameController extends Controller
 {
     /**
@@ -11,10 +12,11 @@ class DetalisGameController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index($id)
     {
 
-        return $game->id;
+
+       
     }
 
     /**
@@ -22,9 +24,12 @@ class DetalisGameController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        //
+        
+        $game=Game::find($id);
+      
+        return view('dashbort.Detalis_Game.create',compact('game'));
     }
 
     /**
@@ -35,7 +40,13 @@ class DetalisGameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $details=Detalis_game::create([
+
+            'content'=>$request['content'],
+            'games_id'=>$request['game_id'],
+        ]);
+
+        return redirect()->route('games');
     }
 
     /**
@@ -46,8 +57,10 @@ class DetalisGameController extends Controller
      */
     public function show($id)
     {
-        $details=Detalis_game::find($id);
-        return view('dashbort.Detalis_Game.show',compact('details'));
+        
+        $game=Game::find($id);
+        $details=Detalis_game::where('games_id',$id)->get();
+        return view('dashbort.Detalis_Game.show',compact('details','game'));
 
     }
 

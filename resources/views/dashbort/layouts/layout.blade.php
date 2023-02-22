@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
  </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body   class="hold-transition sidebar-mini layout-fixed">
 
  
 <div class="wrapper">
@@ -216,15 +216,10 @@
                     <li class="nav-item">
                       <a href="{{ route('About.create') }}" class="nav-link">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>create Team</p>
+                        <p>create About</p>
                       </a>
                     </li>
-                    <li class="nav-item">
-                      <a href="./index3.html" class="nav-link">
-                        <i class="far fa-circle nav-icon"></i>
-                        <p>Dashboard v3</p>
-                      </a>
-                    </li>
+                  
                   </ul>
                 </li>
                
@@ -251,15 +246,10 @@
                    <li class="nav-item">
                      <a href="{{ route('Games.create') }}" class="nav-link">
                        <i class="far fa-circle nav-icon"></i>
-                       <p>create Team</p>
+                       <p>create Games</p>
                      </a>
                    </li>
-                   <li class="nav-item">
-                     <a href="./index3.html" class="nav-link">
-                       <i class="far fa-circle nav-icon"></i>
-                       <p>Dashboard v3</p>
-                     </a>
-                   </li>
+                    
                  </ul>
                </li>
              
@@ -290,12 +280,7 @@
                        <p>create Team</p>
                      </a>
                    </li>
-                   <li class="nav-item">
-                     <a href="./index3.html" class="nav-link">
-                       <i class="far fa-circle nav-icon"></i>
-                       <p>Dashboard v3</p>
-                     </a>
-                   </li>
+                  
                  </ul>
                </li>
                
@@ -321,16 +306,7 @@
                  
              
              
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon fas fa-copy"></i>
-                  <p>
-                   seeting 
-                    <i class="fas fa-angle-left right"></i>
-                    <span class="badge badge-info right">6</span>
-                  </p>
-                </a>
-              </li>
+              
         </ul>
     
    

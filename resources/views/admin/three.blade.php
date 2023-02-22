@@ -128,6 +128,7 @@
             const preview = document.getElementById('preview');
             preview.src = URL.createObjectURL(e.target.files[0]);
             preview.onload = () => URL.revokeObjectURL(preview.src);
+            
         };
         const previewImage1 = e => {
             const previews = document.getElementById('preview1');

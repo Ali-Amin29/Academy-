@@ -9,5 +9,5 @@ class Detalis_game extends Model
 {
     use HasFactory;
     public $table="detalis_Games";
-    protected $fillable=['content','img','games_id'];
+    protected $fillable=['content','games_id'];
 }

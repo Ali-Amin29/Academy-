@@ -24,6 +24,7 @@
          <th>update</th>
          <th>delete</th>
          <th>details</th>
+         <th>create details</th>
        </tr>
      </thead>
      <tbody> 
@@ -62,8 +63,16 @@
         </form>
         {{-- ----------------------------more detalis ----------- --}}
           <td>
-            <form action="{{ route('Game_detalis.show',$game->id)}}" method="get">
+            <form action="{{ route('DetalisGame_index_show',$game->id)}}" method="get">
             <button class="btn btn-info"><i class="fa-solid fa-file-pen"></i></button>
+          </td>
+               {{-- -----------------------------------END deteaildes ------------------- --}}
+
+              </form>
+
+          <td>
+            <form action="{{ route('Game_detalis_create',$game->id)}}" method="get">
+            <button class="btn btn-success"><i class="fa-sharp fa-solid fa-plus"></i></button>
           </td>
        
           </form>
